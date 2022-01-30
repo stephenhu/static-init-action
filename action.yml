@@ -1,0 +1,23 @@
+# action.yml
+name: "static init action"
+description: "static website initialization"
+author: "stephen hu"
+inputs:
+  template:
+    description: source repository to fork
+    required: false
+    default: stephenhu/static-basic
+  staging:
+    description: staging repository name
+    required: false
+    default: same as template name, but with "-staging" appended
+  production:
+    description: production repo name, usually username/username.github.io if you want to leverage github pages
+    required: true
+    default: username.github.io
+runs:
+  using: "node16"
+  main: "main.js"
+branding:
+  icon: "layers"
+  color: "blue"
