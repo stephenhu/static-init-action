@@ -1,5 +1,8 @@
 // static init action
 
+const core    = require("@actions/core");
+const github  = require("@actions/github");
+
 const TEMPLATE      = "template";
 const STAGING       = "staging";
 const PRODUCTION    = "production";
@@ -43,6 +46,6 @@ function checkParams(pa) {
 } // checkParams
 
 
-if(!checkParams([TEMPLATE, STAGING, PRODUCTION])) {
+if(checkParams([TEMPLATE, STAGING, PRODUCTION])) {
   
 }
